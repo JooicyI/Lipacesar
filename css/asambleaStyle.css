@@ -183,6 +183,22 @@ main{
     background: #f9f9f9;
     font-size: 1em;
     border-top: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contenidoAcordeon img{
+    max-width: 100%;
+    height: 180px;
+    display: block;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.contenidoAcordeon p {
+    flex: 1;
+    margin: 0;
 }
 
 .itemAcordeon.active .contenidoAcordeon{
