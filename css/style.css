@@ -326,7 +326,7 @@ section{
     display: flex;
     flex: 1;
     min-width: 200px;
-    max-width: 50%;
+    max-width: 400px;
     height: 150px;
     display: flex;
     flex-direction: row;
@@ -365,4 +365,41 @@ section{
     padding: 5px;
     color: #fff;
     margin-top: auto;
+}
+
+/* Personalizar la barra en navegadores basados en WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra */
+}
+
+::-webkit-scrollbar-track {
+    /* background: #f1f1f1; */
+    /* border-radius: 10px; */
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4CAF50; /* Color del "pulgar" (deslizador) */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #45a049; /* Color al pasar el mouse */
+}
+
+::-webkit-scrollbar-button{
+    background: transparent;
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent; /* Oculta la esquina de la barra */
+}
+
+/* Para Firefox */
+* {
+    scrollbar-color: #4CAF50 transparent; /* (color del pulgar, color de fondo) */
+    scrollbar-width: thin;
 }
