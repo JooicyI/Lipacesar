@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lipacesar</title>
     <link rel="icon" type="image/png" href="img/ISOTIPO.png">
-    <link rel="stylesheet" href="css/contactoStyle.css">
+    <link rel="stylesheet" href="css/galeriaStyle.css">
 </head>
 <body>
     <nav class="navbar">
@@ -45,27 +45,33 @@
     </nav>
 
     <main>
-        <section class="contacto">
-            <h1>Contacto</h1>
-            <p><strong>Dirección:</strong> Calle Falsa 123, Ciudad</p>
-            <p><strong>Teléfono:</strong> +57 300 123 4567</p>
-            <p><strong>Email:</strong> contacto@ligadepatinaje.com</p>
-            <p><strong>Horario de atención:</strong> Lunes a Viernes, 8:00 AM - 6:00 PM</p>
-            <div class="mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125547.13227205249!2d-73.36043119903954!3d10.473217743077566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f2.1!3m3!1m2!1s0x8e8ab9c5b6382bbb%3A0xe7f59b5044d60016!2sPatin%C3%B3dromo%20El%C3%ADas%20Ochoa%20Daza!5e0!3m2!1ses-419!2sco!4v1742483706601!5m2!1ses-419!2sco" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </section>
+        <!-- <div class="galeriaEventos"> -->
+            <h1>Galería de Eventos</h1>
 
-        <section class="form-container">
-            <h2>¡Díselo a la Liga!</h2>
-            <form id="contactForm">
-                <input type="text" name="entry.123456789" placeholder="Nombre" required>
-                <input type="email" name="entry.987654321" placeholder="Correo electrónico" required>
-                <textarea name="entry.1122334455" placeholder="Mensaje" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-            <p id="successMessage" style="display:none; color: green;">¡Mensaje enviado con éxito!</p>
-        </section>
+            <section class="evento">
+            <h2>Evento Deportivo</h2>
+            <div class="imagenesEvento">
+                <div class="imgBox"><img src="https://placehold.co/600x400" alt=""></div>
+                <div class="imgBox"><img src="https://placehold.co/800x400" alt=""></div>
+                <div class="imgBox"><img src="https://placehold.co/600x700" alt=""></div>
+                <div class="imgBox"><img src="https://placehold.co/600x500" alt=""></div>
+            </div>
+            </section>
+
+            <section class="evento">
+                <h2>Evento Deportivo 2</h2>
+                <div class="imagenesEvento">
+                    <div class="imgBox"><img src="https://placehold.co/600x400" alt=""></div>
+                    <div class="imgBox"><img src="https://placehold.co/600x400" alt=""></div>
+                    <div class="imgBox"><img src="https://placehold.co/600x400" alt=""></div>
+                    <div class="imgBox"><img src="https://placehold.co/600x400" alt=""></div>
+                </div>
+                </section>
+
+            <div class="verMasFotos">
+            <a href="" target="_blank">Ver todas las fotos</a>
+            </div>
+        <!-- </div> -->
     </main>
 
     <footer id="footer">
@@ -73,6 +79,7 @@
         <img src="img/BANNER 1170 X 120 2.jpg" alt="footer">
     </footer>
 
+    <script src="js/valoresScript.js"></script>
     <script src="js/responsiveNavScript.js"></script>
 </body>
 </html>
