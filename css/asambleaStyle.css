@@ -53,6 +53,10 @@ main{
     display: block;
 }
 
+.navbar li:hover{
+    background-color: #45a049;
+}
+
 .navbar li:hover ul{
     display: block;
 }
