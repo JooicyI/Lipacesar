@@ -12,6 +12,14 @@ html, body {
     flex-direction: column;
 }
 
+html{
+    font-size: 14px;
+}
+
+body{
+    font-size: 1.25rem;
+}
+
 main{
     flex: 1;
     max-width: 90%;
