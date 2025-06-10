@@ -31,14 +31,13 @@ body {
 
 .navbar{
     position: sticky;
-    top: 0; /* NECESARIO para sticky */
-    z-index: 1000; /* asegura que esté por encima de otros elementos */
+    top: 0;
+    z-index: 1000;
     background-color: #4CAF50;
     padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* text-align: center; */
 }
 
 #logo{
