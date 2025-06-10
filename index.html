@@ -45,80 +45,83 @@
         </ul>
     </nav>
 
-    <main>
-        <section id="sectionGaleria">
-            <div class="galeria">
-                <div class="slideDiv">
-                    <!-- <img src="img/1742228838440.jpg" alt="foto4" class="slide"> -->
-                    <img src="img/elPaso1.jpg" alt="foto4" class="slide">
-                    <img src="img/foto1.jpg" alt="foto2" class="slide">
-                    <img src="img/1742228838287.jpg" alt="foto1" class="slide">
-                    <!-- <img src="./../img/pisPrin.webp" alt="foto4" class="slide"> -->
-                    <img src="img/foto2.jpg" alt="foto3" class="slide">
-                    <img src="img/elPaso2.jpg" alt="foto4" class="slide">
-                    <img src="img/1742228838312.jpg" alt="foto4" class="slide">
-                    <img src="img/1742228838331.jpg" alt="foto4" class="slide">
-                    <img src="img/elPaso.jpg" alt="foto4" class="slide">
-                    <div id="textoSuperpuesto">
-                        <p>La base del patinaje, la unión de los clubes.</p>
-                    </div>
+    <section class="hero">
+        <div class="slideshow-container">
+            <!-- <img src="img/1742228838440.jpg" alt="foto4" class="slide"> -->
+            <img src="img/elPaso1.jpg" alt="foto4" class="slide active">
+            <img src="img/foto1.jpg" alt="foto2" class="slide">
+            <img src="img/1742228838287.jpg" alt="foto1" class="slide">
+            <!-- <img src="./../img/pisPrin.webp" alt="foto4" class="slide"> -->
+            <img src="img/foto2.jpg" alt="foto3" class="slide">
+            <img src="img/elPaso2.jpg" alt="foto4" class="slide">
+            <img src="img/1742228838312.jpg" alt="foto4" class="slide">
+            <img src="img/1742228838331.jpg" alt="foto4" class="slide">
+            <img src="img/elPaso.jpg" alt="foto4" class="slide">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in-up">
+            <h1 class="hero-title">Liga de Patinaje del Cesar</h1>
+            <p class="hero-subtitle">La base del patinaje, la unión de los clubes</p>
+            <a href="#about" class="cta-button">Conócenos</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Video Section 1 -->
+        <section class="section">
+            <div class="video-section">
+                <div class="video-content fade-in-up">
+                    <h3>Descubre la emoción del patinaje</h3>
+                    <p>Revive los mejores momentos de nuestras competencias y entrenamientos. Cada deslizamiento cuenta una historia de dedicación, pasión y superación.</p>
+                    <a href="https://www.instagram.com/ligadepatinajedelcesar" target="_blank" class="video-button">Ver más videos</a>
                 </div>
-                <!-- <div class="textoLateral">
-                    <h3>Sitio web oficial</h3>
-                    <h2>Lipacesar</h2>
-                    <h4>La base del patinaje, la unión de los clubes.</h4>
-                    <button><a href="#">Conócenos</a></button>
-                </div> -->
+                <div class="video-container fade-in-up">
+                    <iframe src="https://www.instagram.com/p/DH7JgwsORtl/embed" scrolling="no"></iframe>
+                </div>
             </div>
         </section>
 
-        <section id="sectionAprendiendoJuntos">
-            <div class="divVideo">
-                <iframe id="videoIframe" src="https://www.instagram.com/p/DH7JgwsORtl/embed" scrolling="no" frameborder="0"></iframe>
-            </div>
-            <div class="divTextoVideo">
-                <h2>Descubre la emoción del patinaje</h2>
-                <p>Revive los mejores momentos de nuestras competencias y entrenamientos.</p>
-                <a href="https://www.instagram.com/ligadepatinajedelcesar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="botonVideo">Ver más videos</a>
-            </div>
-            <!-- <iframe width="auto" height="570px" src="https://www.instagram.com/reel/DGNcdvDISpi/embed/" frameborder="0"></iframe> -->
-        </section>
-
-        <section id="sectionVideo">
-            <div class="divTextoVideo">
-                    <h2>Nuestra familia sobre ruedas: Videos de la comunidad</h2>
-                    <p>Más que un deporte, somos una familia. Descubre la calidez y el espíritu de nuestra comunidad a través de estos videos que capturan la esencia de lo que significa ser parte de Lipacesar</p>
-                    <a href="https://www.instagram.com/ligadepatinajedelcesar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="botonVideo">Ver más videos</a>
-                </div>
-                <div class="divVideo">
-                    <video id="videoEntrenamiento" controls>
-                        <source src="img/videoAlcaldia.mp4" type="video/mp4">
+        <!-- Video Section 2 -->
+        <section class="section">
+            <div class="video-section">
+                <div class="video-container fade-in-up">
+                    <video controls>
+                        <source src="./img/videoAlcaldia.mp4" type="video/mp4">
                         Tu navegador no soporta el video.
                     </video>
                 </div>
+                <div class="video-content fade-in-up">
+                    <h3>Nuestra familia sobre ruedas</h3>
+                    <p>Más que un deporte, somos una familia. Descubre la calidez y el espíritu de nuestra comunidad a través de estos videos que capturan la esencia de lo que significa ser parte de Lipacesar.</p>
+                    <a href="https://www.instagram.com/ligadepatinajedelcesar" target="_blank" class="video-button">Explorar comunidad</a>
+                </div>
+            </div>
         </section>
 
-        <center><h1>Nuestras redes sociales</h1><br></center>
-        <div id="sectionRedes">
-            <div class="redes">
-                <a href="#">
-                    <img src="img/fb.jpg" alt="fb">
-                    <p>Siguenos en Facebook</p>
-                </a>
+        <!-- Social Media Section -->
+        <section class="social-section">
+            <div class="container">
+                <h2 class="section-title fade-in-up">Síguenos en nuestras redes</h2>
+                <div class="social-grid">
+                    <div class="social-card fade-in-up">
+                        <img src="./img/fb.jpg" alt="Facebook">
+                        <h4>Facebook</h4>
+                        <a href="#">Síguenos en Facebook</a>
+                    </div>
+                    <div class="social-card fade-in-up">
+                        <img src="./img/ig.jpg" alt="Instagram">
+                        <h4>Instagram</h4>
+                        <a href="https://www.instagram.com/ligadepatinajedelcesar" target="_blank">Síguenos en Instagram</a>
+                    </div>
+                    <div class="social-card fade-in-up">
+                        <img src="./img/x.jpg" alt="X">
+                        <h4>X</h4>
+                        <a href="#">Síguenos en X</a>
+                    </div>
+                </div>
             </div>
-            <div class="redes">
-                <a href="https://www.instagram.com/ligadepatinajedelcesar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-                    <img src="img/ig.jpg" alt="ig">
-                    <p>Siguenos en Instagram</p>
-                </a>
-            </div>
-            <div class="redes">
-                <a href="#">
-                    <img src="img/x.jpg" alt="tw">
-                    <p>Siguenos en X</p>
-                </a>
-            </div>
-        </div>
+        </section>
     </main>
 
     <footer id="footer">
