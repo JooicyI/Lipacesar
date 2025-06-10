@@ -29,6 +29,11 @@ body {
     background: var(--background);
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .navbar{
     position: sticky;
     top: 0;
@@ -198,7 +203,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(69, 160, 73, 0.6) 100%);
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.55) 0%, rgba(69, 160, 73, 0.45) 100%);
     z-index: 2;
 }
 
@@ -348,16 +353,20 @@ body {
 /* Social Media Section */
 .social-section {
     background: linear-gradient(135deg, var(--surface) 0%, #ffffff 100%);
-    padding: 4rem 0;
+    padding: 4rem 1rem; /* padding horizontal reducido para móviles */
     border-radius: 24px;
-    margin: 4rem 0;
+    margin: 4rem auto;
+    max-width: 1200px; /* centrado en pantallas grandes */
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .social-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
+    width: 100%;
 }
 
 .social-card {
@@ -368,6 +377,7 @@ body {
     box-shadow: 0 10px 30px var(--shadow);
     transition: all 0.3s ease;
     border: 1px solid var(--border);
+    box-sizing: border-box;
 }
 
 .social-card:hover {
@@ -427,6 +437,45 @@ body {
 
     .section-title {
         font-size: 2rem;
+    }
+
+    /* Temporal antes del botón */
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #logo {
+        max-width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+    /* Temporal */
+
+    .social-section {
+        padding: 2rem 1rem;
+        margin: 2rem auto;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .social-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
     }
 }
 
