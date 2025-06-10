@@ -29,7 +29,7 @@ main{
     margin-bottom: 10px;
 }
 
-.navbar{
+.navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -38,42 +38,72 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
+    isolation: isolate;
 }
 
-#logo{
+#logo {
     width: 280px;
     height: auto;
     margin-left: 30px;
 }
 
-.navbar ul{
+/* Hamburguesa */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    z-index: 1100;
+}
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+.submenu-toggle {
+    display: none;
+}
+
+/* Menú principal */
+.nav-menu {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
 
-.navbar li{
+.navbar li {
     position: relative;
 }
 
-.navbar a{
+.navbar a {
     color: #fff;
     text-decoration: none;
     padding: 1em;
     display: block;
 }
 
-.navbar li:hover{
+.navbar li:hover {
     background-color: #45a049;
 }
 
-.navbar li:hover ul{
+.navbar li:hover ul {
     display: block;
 }
 
-.navbar ul ul{
+.navbar ul ul {
     display: none;
     position: absolute;
     background-color: #333;
@@ -82,20 +112,21 @@ main{
     z-index: 1000;
 }
 
-.navbar ul ul li{
+.navbar ul ul li {
     display: block;
 }
 
-.navbar ul ul li:hover{
+.navbar ul ul li:hover {
     background-color: #444;
     color: #fff;
 }
 
-.navbar ul ul a{
+.navbar ul ul a {
     padding: 0.5em;
 }
 
-.dropdownNoticias{
+/* Noticias desplegable */
+.dropdownNoticias {
     display: none;
     position: absolute;
     top: 100%;
@@ -112,13 +143,13 @@ main{
     flex-wrap: wrap;
 }
 
-.noticias:hover .dropdownNoticias{
+.noticias:hover .dropdownNoticias {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
 
-.itemNoticias{
+.itemNoticias {
     position: relative;
     width: 160px;
     height: 100px;
@@ -130,7 +161,7 @@ main{
     flex-shrink: 0;
 }
 
-.itemNoticias img{
+.itemNoticias img {
     position: absolute;
     top: 0;
     left: 0;
@@ -140,7 +171,7 @@ main{
     display: block;
 }
 
-.itemNoticias span{
+.itemNoticias span {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -154,8 +185,61 @@ main{
     pointer-events: none;
 }
 
-.itemNoticias:hover span{
+.itemNoticias:hover span {
     background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* === RESPONSIVE NAVBAR === */
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #4CAF50;
+        position: static;
+        /* z-index: 1000; */
+    }
+
+    .nav-menu.open {
+        display: flex;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .nav-menu > li {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .submenu,
+    .dropdownNoticias {
+        display: none !important;
+        background-color: #388E3C;
+        padding: 0.5rem 1rem;
+    }
+
+    .submenu.open,
+    .dropdownNoticias.open {
+        display: block !important;
+    }
+
+    .submenu-toggle {
+        margin-left: 5px;
+        cursor: pointer;
+        display: inline;
+        font-size: 0.9rem;
+    }
+
+    #logo {
+        max-width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
 }
 
 section{

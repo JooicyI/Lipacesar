@@ -10,12 +10,22 @@
 <body>
     <nav class="navbar">
         <img src="img/LIGA-DE-PATINAJE-LOGOTIPO-POSITIVO-bordesReducidos.png" alt="logo" id="logo">
-        <ul>
+
+        <!-- Botón hamburguesa -->
+        <button id="menuToggle" class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-menu">
             <li><a href="index.html">Inicio</a></li>
 
-            <li class="noticias">
-                <a href="noticias.html">Noticias</a>
-                <div class="dropdownNoticias">
+            <li class="noticias has-submenu">
+                <a href="noticias.html">
+                    Noticias <span class="submenu-toggle">▼</span>
+                </a>
+                <div class="dropdownNoticias submenu">
                     <a href="#" class="itemNoticias">
                         <img src="img/alcaldia.webp" alt="Noticia 2">
                         <span>Enfocados en el beneficio para los deportistas</span>
@@ -30,15 +40,20 @@
                     </a>
                 </div>
             </li>
+
             <li><a href="galeria.html">Galeria</a></li>
-            <li>
-                <a href="#">Nosotros</a>
-                <ul>
+
+            <li class="has-submenu">
+                <a>
+                    Nosotros <span class="submenu-toggle">▼</span>
+                </a>
+                <ul class="submenu">
                     <li><a href="organizacion.html">Organización</a></li>
                     <li><a href="asamblea.html">Asamblea</a></li>
                     <li><a href="valores.html">Valores organizacionales</a></li>
                 </ul>
             </li>
+
             <li><a href="documentos.html">Documentos</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="https://fedepatincol.rsportz.com" target="_blank">Portal Fedepatin</a></li>
