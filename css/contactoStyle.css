@@ -24,9 +24,14 @@ body{
 
 main{
     flex: 1;
-    max-width: 90%;
-    margin: 0 auto;
-    margin-bottom: 10px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 10px;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-sizing: border-box;
 }
 
 .navbar {
@@ -242,21 +247,10 @@ main{
     }
 }
 
-main{
-    max-width: 90%;
-    margin: 0 auto;
-    /* font-family: Arial, sans-serif; */
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
-    /* height: 100vh; */
-    /* background-color: #f4f4f4; */
-}
+/* main eliminado */
 
 .contacto, .form-container{
-    flex: 1;
+    /* flex: 1; */
     min-width: 300px;
     max-width: 600px;
     display: flex;
@@ -276,58 +270,110 @@ main{
 }
 
 .form-container {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centrar verticalmente */
-    align-items: center;
     background: white;
-    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem 2rem 0 2rem;
+    margin: 2rem auto 0rem;
     width: 100%;
     max-width: 500px;
-    min-width: 350px;
-    height: auto; /* Se adapta al contenido */
     box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0;
+    contain: layout paint;
+}
+
+.form-container form {
+    width: 100%;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
 }
 
 form {
-    width: 100%; /* Ocupa el 100% del contenedor */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Asegura alineación */
+    gap: 1rem;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
 
-input, textarea {
-    width: 100%; /* Ahora ocupan el 100% sin sobresalir */
-    max-width: 100%; /* Evita que se expandan más del contenedor */
-    height: 40px;
-    padding: 10px;
-    margin: 10px 0;
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Ajusta el tamaño incluyendo padding y border */
+    box-sizing: border-box;
 }
 
 textarea {
     height: 200px;
-    resize: none; /* Bloquea la redimensión */
+    resize: none;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
+    padding: 0.75rem;
+    font-size: 1rem;
     background-color: #4CAF50;
     color: white;
     border: none;
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 0 !important;
+    box-sizing: border-box;
+    transform-origin: center;
+    will-change: transform;
+    transition: transform 0.2s ease-in-out;
 }
 
 button:hover {
-    background-color: #27ae60;
-    transform: scale(1.05);
+    background-color: #45a049;
+    transform: scale(1.03);
+}
+
+#successMessage {
+    display: none;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+}
+
+.form-container > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Asegura que el form no esté colapsando */
+form {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-sizing: border-box;
+}
+
+/* Asegura que el botón no agregue espacio abajo */
+form button {
+    margin-bottom: 0 !important;
+}
+
+/* Asegura que el contenedor no genere espacio adicional */
+.form-container {
+    overflow: hidden;
+    padding-bottom: 0 !important;
 }
 
 #footer{
@@ -377,4 +423,36 @@ button:hover {
 * {
     scrollbar-color: #4CAF50 transparent; /* (color del pulgar, color de fondo) */
     scrollbar-width: thin;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacto,
+    .form-container {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .form-container {
+        margin-top: 0;
+        padding: 1rem;
+    }
+
+    iframe {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    input,
+    textarea,
+    button {
+        font-size: 1rem;
+    }
 }

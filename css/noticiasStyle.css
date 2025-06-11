@@ -259,7 +259,7 @@ main{
     min-width: 250px;
     max-width: 320px;
     min-height: 350px;
-    max-height: 450px;
+    max-height: 470px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
