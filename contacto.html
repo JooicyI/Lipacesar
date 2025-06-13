@@ -74,13 +74,21 @@
 
         <section class="form-container">
             <h2>¡Díselo a la Liga!</h2>
-            <form id="contactForm">
-                <input type="text" name="entry.123456789" placeholder="Nombre" required>
-                <input type="email" name="entry.987654321" placeholder="Correo electrónico" required>
-                <textarea name="entry.1122334455" placeholder="Mensaje" required></textarea>
+            <form id="contactForm"
+                action="https://docs.google.com/forms/d/e/1FAIpQLSf-JR72v8hihLRXgdvBeG3ly3GOdV4gbFcjAUnwGWBdN6oZyA/formResponse"
+                method="POST"
+                target="hidden_iframe">
+
+                <input type="text" name="entry.190754115" placeholder="Nombre" required>
+                <input type="email" name="entry.1575306358" placeholder="Correo electrónico" required>
+                <textarea name="entry.1401283838" placeholder="Mensaje" required></textarea>
+
                 <button type="submit">Enviar</button>
             </form>
-            <p id="successMessage" style="display:none; color: green;">¡Mensaje enviado con éxito!</p>
+
+            <p id="mensaje-exito" style="display:none; color: green;">¡Gracias por tu mensaje!</p>
+
+            <iframe name="hidden_iframe" style="display:none;"></iframe>
         </section>
     </main>
 
@@ -90,5 +98,16 @@
     </footer>
 
     <script src="js/responsiveNavScript.js"></script>
+    <script>
+        const form = document.getElementById('contactForm');
+        const mensaje = document.getElementById('mensaje-exito');
+
+        form.addEventListener('submit', () => {
+            // Esperamos un momento para que el formulario se envíe
+            setTimeout(() => {
+                mensaje.style.display = 'block';
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
