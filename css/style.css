@@ -436,6 +436,30 @@ body {
     box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
 }
 
+.video-container blockquote.instagram-media {
+    width: 100% !important;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.video-container blockquote.instagram-media:hover {
+    transform: translateY(-5px);
+}
+
+/* Instagram a veces genera un iframe interno, así que puedes forzar un estilo general */
+.video-container iframe {
+    width: 100% !important;
+    height: auto !important;
+    border: none;
+    border-radius: 10px;
+    min-height: 850px;
+}
+
+
 /* === REDES === */
 .social-section {
     background: linear-gradient(135deg, var(--surface) 0%, #ffffff 100%);
