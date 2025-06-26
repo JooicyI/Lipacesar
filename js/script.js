@@ -53,6 +53,37 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+const btnResoluciones = document.getElementById('botonResoluciones');
+const btnCirculares = document.getElementById('botonCirculares');
+const tablaResoluciones = document.getElementById('tablaResoluciones');
+const tablaCirculares = document.getElementById('tablaCirculares');
+
+btnResoluciones.addEventListener('click', () => {
+    const visible = tablaResoluciones.classList.contains('activa');
+    ocultarTodo();
+    if (!visible) {
+        tablaResoluciones.classList.add('activa');
+        btnResoluciones.classList.add('activo');
+    }
+});
+
+btnCirculares.addEventListener('click', () => {
+    const visible = tablaCirculares.classList.contains('activa');
+    ocultarTodo();
+    if (!visible) {
+        tablaCirculares.classList.add('activa');
+        btnCirculares.classList.add('activo');
+    }
+});
+
+function ocultarTodo() {
+    tablaResoluciones.classList.remove('activa');
+    tablaCirculares.classList.remove('activa');
+    btnResoluciones.classList.remove('activo');
+    btnCirculares.classList.remove('activo');
+}
+
+
 // let slideIndex = 0;
 // const slides = document.getElementsByClassName("slide");
 
